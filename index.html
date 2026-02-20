@@ -17,14 +17,31 @@
 <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-blue-600">Sercle</h1>
-    <div class="space-x-6 font-medium">
-      <a href="#" class="hover:text-green-500 transition">Home</a>
-      <a href="produk.html" class="hover:text-green-500 transition">Produk</a>
-      <a href="#tentang" class="hover:text-green-500 transition">Tentang</a>
-      <a href="https://wa.me/62895605274321?text=Halo,%20Admin%20saya%20tertarik%20untuk%20membeli%20Sercle%20" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
-        Kontak
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6 font-medium">
+      <a href="#" class="flex items-center px-2 py-2 hover:text-green-500">Home</a>
+      <a href="produk.html" class="flex items-center px-2 py-2 hover:text-green-500">Produk</a>
+      <a href="#tentang" class="flex items-center px-2 py-2 hover:text-green-500">Tentang</a>
+      <a href="https://wa.me/62895605274321?text=Halo,%20Admin%20saya%20tertarik%20untuk%20membeli%20Sercle%20"
+         class="flex items-center bg-green-500 text-white px-4 py-2 rounded-full">
+         Kontak
       </a>
     </div>
+
+    <!-- Hamburger -->
+    <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-6 space-y-4">
+    <a href="#" class="block">Home</a>
+    <a href="produk.html" class="block">Produk</a>
+    <a href="#tentang" class="block">Tentang</a>
+    <a href="https://wa.me/62895605274321?text=Halo,%20Admin%20saya%20tertarik%20untuk%20membeli%20Sercle%20"
+       class="block bg-green-500 text-white px-4 py-2 rounded-full text-center">
+       Kontak
+    </a>
   </div>
 </nav>
 
