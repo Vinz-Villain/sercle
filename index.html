@@ -8,94 +8,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; }
-    @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.3s ease forwards;
-}
   </style>
 </head>
 
 <body class="bg-slate-50 text-gray-800">
 
-<!-- NAVBAR MODERN -->
-<nav class="fixed w-full z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 mt-4">
-    
-    <div class="flex justify-between items-center 
-                bg-white/60 backdrop-blur-xl 
-                border border-white/40 
-                shadow-lg 
-                rounded-2xl px-6 py-4">
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">Sercle</h1>
 
-      <!-- Logo -->
-      <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-        Sercle
-      </h1>
-
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
-        <a href="#" class="hover:text-green-500 transition duration-300">Home</a>
-        <a href="produk.html" class="hover:text-green-500 transition duration-300">Produk</a>
-        <a href="#tentang" class="hover:text-green-500 transition duration-300">Tentang</a>
-        <a href="#"
-           class="bg-gradient-to-r from-green-500 to-emerald-400 
-                  text-white px-5 py-2 rounded-full 
-                  shadow-md hover:scale-105 transition duration-300">
-          Kontak
-        </a>
-      </div>
-
-      <!-- Hamburger -->
-      <button id="menuBtn" 
-              class="md:hidden text-3xl text-gray-800 transition duration-300">
-        ☰
-      </button>
-
-    </div>
-  </div>
-
-  <div id="mobileMenu"
-     class="fixed inset-0 bg-black/30 backdrop-blur-sm hidden z-50">
-
-  <!-- Right Floating Card -->
-  <div class="absolute top-20 right-6 
-              w-[75%] max-w-xs
-              bg-white/90 backdrop-blur-xl
-              rounded-2xl shadow-2xl
-              p-6 space-y-5
-              animate-fadeIn">
-
-    <div class="flex justify-between items-center">
-      <h2 class="font-semibold text-lg">Menu</h2>
-      <button id="closeBtn" class="text-xl">✕</button>
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6 font-medium">
+      <a href="#" class="flex items-center px-2 py-2 hover:text-green-500">Home</a>
+      <a href="produk.html" class="flex items-center px-2 py-2 hover:text-green-500">Produk</a>
+      <a href="#tentang" class="flex items-center px-2 py-2 hover:text-green-500">Tentang</a>
+      <a href="https://wa.me/62895605274321?text=Halo,%20Admin%20saya%20tertarik%20untuk%20membeli%20Sercle%20"
+         class="flex items-center bg-green-500 text-white px-4 py-2 rounded-full">
+         Kontak
+      </a>
     </div>
 
-    <a href="#" class="block hover:text-green-500 transition mobile-link">Home</a>
-    <a href="produk.html" class="block hover:text-green-500 transition mobile-link">Produk</a>
-    <a href="#tentang" class="block hover:text-green-500 transition mobile-link">Tentang</a>
-
-    <a href="#"
-       class="block text-center bg-gradient-to-r from-green-500 to-emerald-400 
-              text-white py-2.5 rounded-full shadow-md mobile-link">
-      Kontak
-    </a>
-
+    <!-- Hamburger -->
+    <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
   </div>
-</div>
-</nav>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu"
-       class="md:hidden hidden flex flex-col bg-white px-6 pb-6 space-y-4 shadow-md">
-    <a href="#" class="mobile-link block">Home</a>
-    <a href="produk.html" class="mobile-link block">Produk</a>
-    <a href="#tentang" class="mobile-link block">Tentang</a>
+  <div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-6 space-y-4">
+    <a href="#" class="block">Home</a>
+    <a href="produk.html" class="block">Produk</a>
+    <a href="#tentang" class="block">Tentang</a>
     <a href="https://wa.me/62895605274321?text=Halo,%20Admin%20saya%20tertarik%20untuk%20membeli%20Sercle%20"
-       class="mobile-link block bg-green-500 text-white px-4 py-2 rounded-full text-center">
+       class="block bg-green-500 text-white px-4 py-2 rounded-full text-center">
        Kontak
     </a>
   </div>
@@ -129,21 +73,27 @@
     </div>
 
     <div class="relative flex justify-center items-center">
-      <div class="absolute -top-10 -left-10 w-72 h-72 bg-green-400 rounded-full blur-3xl opacity-20"></div>
-      <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
+  
+  <!-- Background blur tetap boleh jika mau -->
+  <div class="absolute -top-10 -left-10 w-72 h-72 bg-green-400 rounded-full blur-3xl opacity-20"></div>
+  <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
 
-      <img src="assets/LogoSercle.png" 
-           class="relative w-[340px] h-auto">
-    </div>
+  <img src="assets/LogoSercle.png" 
+       class="relative w-85 h-auto">
+       
+</div>
 
   </div>
 </section>
 
-<!-- Tentang -->
-<section id="tentang" class="bg-white py-20">
+<!-- Tentang Sercle -->
+ <section id="tentang"></section>
+<section class="bg-white py-20">
   <div class="max-w-6xl mx-auto px-6">
+
     <div class="grid md:grid-cols-2 gap-12 items-center">
 
+      <!-- Text -->
       <div>
         <h2 class="text-3xl font-bold text-gray-800 mb-6">
           Tentang Sercle
@@ -151,55 +101,104 @@
 
         <p class="text-gray-600 leading-relaxed mb-6">
           Sercle hadir sebagai alternatif berbahan alami untuk membantu menciptakan ruang yang lebih nyaman tanpa bergantung pada bahan kimia sintetis yang keras.
+
+Salah satu pendekatan yang kami gunakan adalah memanfaatkan ekstrak dari limbah kulit jeruk sebagai bahan utama. Selain dikenal memiliki aroma segar alami, pemanfaatan kulit jeruk juga menjadi bagian dari upaya kami untuk mengurangi limbah dan menghadirkan solusi yang lebih berkelanjutan.
         </p>
 
         <p class="text-gray-600 leading-relaxed mb-8">
           Menggabungkan ekstrak kulit jeruk, sereh, cengkeh, dan kayu manis, 
-          Sercle dirancang untuk memberikan perlindungan alami dengan aroma herbal yang menyegarkan.
+          Sercle dirancang untuk memberikan perlindungan alami 
+          dengan aroma herbal yang menyegarkan.
         </p>
+
+        <div class="grid grid-cols-2 gap-4 text-sm">
+
+
+</div>
+
       </div>
 
+      <!-- Visual Box -->
       <div class="bg-gradient-to-br from-green-100 to-green-50 
                   rounded-2xl p-12 text-center shadow-lg">
+
         <h3 class="text-xl font-semibold text-green-700 mb-4">
           Konsep Sercle
         </h3>
+
         <p class="text-gray-700 leading-relaxed">
           Sercle diformulasikan dengan kombinasi ekstrak tumbuhan
-          dan bahan pendukung untuk menjaga stabilitas
-          serta kenyamanan penggunaan.
+    dan bahan pendukung yang digunakan untuk menjaga stabilitas
+    serta kenyamanan penggunaan. Kami berupaya menyeimbangkan
+    efektivitas dan pengalaman pemakaian secara proporsional.
         </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <h3 class="text-4xl font-bold mb-4">
+      Kenapa Memilih <span class="text-blue-600">Sercle?</span>
+    </h3>
+    <p class="text-gray-500 mb-16">
+      Solusi modern untuk perlindungan alami tanpa bahan kimia keras.
+    </p>
+
+    <div class="grid md:grid-cols-4 gap-8">
+
+      <div class="bg-slate-50 p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="text-green-500 text-3xl mb-4">🌿</div>
+        <h4 class="font-semibold mb-2">Botanical Based</h4>
+        <p class="text-sm text-gray-500">Mengandung ekstrak sereh, cengkeh, kayu manis & citrus.</p>
+      </div>
+
+      <div class="bg-slate-50 p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="text-green-500 text-3xl mb-4">🛡️</div>
+        <h4 class="font-semibold mb-2">Tanpa Insektisida Sintetis</h4>
+        <p class="text-sm text-gray-500">Tidak mengandung DEET atau bahan kimia keras.</p>
+      </div>
+
+      <div class="bg-slate-50 p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="text-green-500 text-3xl mb-4">🌎</div>
+        <h4 class="font-semibold mb-2">Eco Friendly</h4>
+        <p class="text-sm text-gray-500">Ramah lingkungan & biodegradable.</p>
+      </div>
+
+      <div class="bg-slate-50 p-8 rounded-3xl shadow hover:shadow-xl transition">
+        <div class="text-green-500 text-3xl mb-4">✨</div>
+        <h4 class="font-semibold mb-2">Aroma Segar</h4>
+        <p class="text-sm text-gray-500">Wangi citrus & rempah yang menyegarkan.</p>
       </div>
 
     </div>
   </div>
 </section>
 
+<!-- CTA SECTION -->
+<section class="py-24 bg-gradient-to-r from-blue-600 to-green-500 text-white text-center">
+  <h3 class="text-4xl font-bold mb-6">
+    Siap Melindungi Ruangan Anda?
+  </h3>
+  <p class="mb-8 text-lg">
+    Pesan sekarang dan rasakan perlindungan alami dari Sercle.
+  </p>
+  <a href="https://wa.me/62895605274321?text=Halo,%20Admin%20saya%20tertarik%20untuk%20membeli%20Sercle%20" 
+     class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition">
+     Pesan Sekarang
+  </a>
+</section>
+
 <!-- FOOTER -->
 <footer class="bg-slate-900 text-gray-400 py-8 text-center">
   © 2026 Sercle. Natural Protection.
 </footer>
-
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const closeBtn = document.getElementById("closeBtn");
-  const mobileLinks = document.querySelectorAll(".mobile-link");
-
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("hidden");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-  });
-
-  mobileLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-    });
-  });
-</script>
 
 </body>
 </html>
